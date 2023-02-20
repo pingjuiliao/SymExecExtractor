@@ -50,6 +50,7 @@ add_clang_library(clangStaticAnalyzerCore
   SymbolManager.cpp
   TextDiagnostics.cpp
   WorkList.cpp
+  AsStmtPrinter.cpp
 
   LINK_LIBS
   clangAST

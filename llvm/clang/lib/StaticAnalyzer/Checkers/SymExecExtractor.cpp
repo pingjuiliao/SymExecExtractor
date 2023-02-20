@@ -11,7 +11,6 @@
 // for each return code.
 //===----------------------------------------------------------------------===//
 
-#include "ClangSACheckers.h"
 #include "clang/StaticAnalyzer/Core/BugReporter/BugType.h"
 #include "clang/StaticAnalyzer/Core/Checker.h"
 #include "clang/StaticAnalyzer/Core/CheckerManager.h"
@@ -341,4 +340,8 @@ bool SymExecExtractor::isInBlackList(CheckerContext &C,
 
 void ento::registerSymExecExtractor(CheckerManager &mgr) {
   mgr.registerChecker<SymExecExtractor>();
+}
+
+void ento::shouldRegisterSymExecExtractor(const CheckerManager &Mgr) {
+  return true;
 }
