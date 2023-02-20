@@ -575,6 +575,10 @@ def SimpleStreamChecker : Checker<"SimpleStream">,
   HelpText<"Check for misuses of stream APIs">,
   Documentation<HasDocumentation>;
 
+def SymExecExtractor : Checker<"SymExecExtract">,
+  HelpText<"Extract symbolic execution">,
+  DescFile<"SymExecExtractor.cpp">;
+
 def BlockInCriticalSectionChecker : Checker<"BlockInCriticalSection">,
   HelpText<"Check for calls to blocking functions inside a critical section">,
   Documentation<HasDocumentation>;
